@@ -33,7 +33,7 @@ pipeline {
             steps {
                 sh 'printenv'
                 echo 'docker build image'
-                sh 'docker build --no-cache -t app:${BUILD_NUMBER} -f ./exam-admin/Dockerfile .'
+                sh 'docker build --no-cache -t $serviceName:${BUILD_NUMBER} -f ./exam-admin/Dockerfile .'
                 sh 'docker tag $serviceName:${BUILD_NUMBER} 192.168.56.110:5000/$serviceName:${BUILD_NUMBER}'
                 sh 'docker push 192.168.56.110:5000/$serviceName:${BUILD_NUMBER}'
             }
