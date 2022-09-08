@@ -13,16 +13,16 @@ pipeline {
         stage('package') {
             steps {
                 sh 'ls'
-                sh 'cd ./exam-admin'
-
-                echo 'delete target'
-                sh 'rm -rf target'
-                sh 'ls'
 
                 echo 'start package'
-                sh 'mvn -B -DskipTests clean package'
+                bat """
+                    cd ./exam-admin
+                    echo 'delete target'
+                    sh 'rm -rf target'
+                    sh 'ls'
+                    mvn -B -DskipTests clean package
+                """.stripIndent().trim()
                 echo 'maven package jar success'
-                sh 'cd ../'
             }
         }
 
