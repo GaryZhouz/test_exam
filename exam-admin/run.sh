@@ -9,7 +9,7 @@ if [ -z $JAR_PATH ];then
 fi
 
 if [ -z $EXAM_ENV ];then
-    $EXAM_ENV="prod"
+    EXAM_ENV="prod"
 fi
 
 if [ x$LOG != "xfalse" ];then
