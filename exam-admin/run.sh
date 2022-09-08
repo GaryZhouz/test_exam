@@ -17,6 +17,6 @@ if [ x$LOG != "xfalse" ];then
     LOGGING_OPT="--logging.path=./logs"
 fi
 
-echo $JAVA_OPTS -Dlogging.path=./logs -DSpring.profiles.active=${EXAM_ENV} -jar ${JAR_PATH}/*.jar
+echo $JAVA_OPTS -Dlogging.path=./logs -DSpring.profiles.active=$EXAM_ENV -jar ${JAR_PATH}/*.jar
 
-java $JAVA_OPTS -Dlogging.path=./logs -DSpring.profiles.active=${EXAM_ENV} -jar ${JAR_PATH}/*.jar
+java $JAVA_OPTS -Dlogging.path=./logs -DSpring.profiles.active=$EXAM_ENV -jar ${JAR_PATH}/*.jar
