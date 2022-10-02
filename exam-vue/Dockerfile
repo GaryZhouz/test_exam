@@ -8,6 +8,6 @@ COPY . /opt/exam-frontend
 
 EXPOSE 8080
 
-RUN npm i --registry ${REGISTRY}
+RUN ls && npm i --registry ${REGISTRY}
 
 CMD ["npm", "run", "prod"]
