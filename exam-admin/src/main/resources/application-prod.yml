@@ -1,6 +1,11 @@
 server:
   port: 8888
 
+management:
+  endpoint:
+    health:
+      show-details=always: always
+
 spring:
   servlet:
     multipart:
