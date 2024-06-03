@@ -20,6 +20,7 @@ spring:
   redis:
     host: ${REDIS_HOSTNAME}
     port: 6379
+    password: ${REDIS_PASSWORD}
   datasource:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
