@@ -1,6 +1,6 @@
 FROM node:12
 
-ARG REGISTRY=https://registry.npm.taobao.org
+ARG REGISTRY=https://registry.npmmirror.com
 
 WORKDIR /opt/exam-frontend
 
